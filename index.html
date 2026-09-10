@@ -1,34 +1,22 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>แบบประเมิน M Learn AR</title>
-
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    iframe {
-      display: block;
-      width: 100%;
-      height: 100vh;
-      border: 0;
-    }
-  </style>
-</head>
-
-<body>
+<div id="surveyPopup">
+  
+  <div id="surveyLoading">
+    <div class="loading-icon">💜</div>
+    <div class="loading-title">กำลังเตรียมแบบประเมิน</div>
+    <div class="loading-text">กรุณารอสักครู่...</div>
+  </div>
 
   <iframe
-    src="https://script.google.com/macros/s/AKfycbyhhjSUlWHTkWn7lzFfXQG7yF6EPFBcrgjmuOEykPdf3OVJ9VRYPxDiQb52Wax-G3hU/exec">
+    id="surveyFrame"
+    src="https://script.google.com/macros/s/xxxxx/exec"
+    onload="surveyLoaded()">
   </iframe>
 
-</body>
-</html>
+</div>
+
+<script>
+function surveyLoaded() {
+  document.getElementById("surveyLoading").style.display = "none";
+  document.getElementById("surveyFrame").style.display = "block";
+}
+</script>
